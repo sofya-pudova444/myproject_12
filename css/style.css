@@ -2,7 +2,7 @@
   font-family: 'ArialEcofont'; 
   src: url('../fonts/ArialEcofont-Italic.ttf'); 
   font-weight: normal;
-  font-style: italic;
+  font-style: normal
 }
 
 .header {
@@ -18,7 +18,7 @@
 .log {
     width: 23%;
     height: 80px;
-    background-color: #0c0c0c;
+    background-color: #181818;
     float: left;
 }
 
