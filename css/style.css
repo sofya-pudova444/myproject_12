@@ -465,3 +465,244 @@ button[type="submit"]:hover{
     justify-content: center; /* Центрирование карточек */
     gap: 75px;              /* Расстояние между карточками */
 }
+
+.container_block {
+    position: absolute;
+    width: 99%;
+    height: 610px;
+    float: left;
+    top: 100px;
+    left: 10px;
+    border-radius: 10px;
+    background-color: #868686;
+    overflow: hidden;
+}
+
+/*---SLIDER---*/    
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Обрезаем картинку по границам слайда */
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет слайд полностью с обрезкой */
+    display: block;
+    border-radius: inherit;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(156, 151, 151, 1);
+}
+
+
+
+@media (max-width: 768px) {
+    /* HEADER */
+    .header {
+        height: 70px;
+    }
+    
+    .log p {
+        font-size: 20px;
+        left: 15px;
+        top: 0;
+    }
+    
+    .menu {
+        width: auto;
+        margin-left: 10px;
+    }
+    
+    .menu_name li {
+        margin-left: 15px;
+        font-size: 14px;
+    }
+
+    /* CATALOG */
+    .catalog {
+        position: static;
+        width: 90%;
+        height: 200px;
+        margin: 10px auto;
+        top: auto;
+        left: 5%;
+        border-radius: 8px;
+    }
+    
+    .catalog p {
+        font-size: 20px;
+        text-align: center;
+        margin-left: 0;
+    }
+    
+    .catalog_menu li {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    /* CARDS */
+    .cards {
+        position: static;
+        width: 100%;
+        left: 0;
+        top: 0;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    
+    .card {
+        width: calc(50% - 12px); /* 2 в ряд */
+        height: 280px;
+        margin-bottom: 10px;
+    }
+
+    /* FOOTER */
+    .footer {
+        position: static;
+        height: auto;
+        padding: 20px 10px;
+    }
+    
+    .block_1,
+    .block_2 {
+        width: 100%;
+        float: none;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    .block_1 h1 {
+        position: static;
+        text-align: center;
+    }
+    
+    .info {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* FORM (WORK.HTML) */
+    .form_text {
+        margin: 80px 20px 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .forms {
+        width: 90%;
+        margin: 10px auto;
+        padding: 20px;
+    }
+    
+    input[type="text"],
+    button[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    /* CONTACT (CONNECTION.HTML) */
+    .contact {
+        width: 90%;
+        margin: 100px auto 20px;
+        top: auto;
+        left: auto;
+    }
+
+    /* BLOG */
+    .container_block {
+        width: 90%;
+        height: 200px;
+        top: 100px;
+        margin: 0 auto;
+    }
+    
+    .blog_text {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        height: 75px;
+    }
+    
+    .log p {
+        font-size: 24px;
+    }
+    
+    .catalog {
+        width: 25%;
+        height: 450px;
+        top: 100px;
+        left: 10px;
+    }
+    
+    .cards {
+        left: 28%;
+        width: 68%;
+    }
+    
+    .card {
+        width: calc(25% - 14px);
+        height: 290px;
+    }
+    
+    .forms {
+        width: 700px;
+        margin-left: 200px;
+    }
+    
+    .contact {
+        width: 700px;
+        top: 120px;
+    }
+}
